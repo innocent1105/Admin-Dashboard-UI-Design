@@ -1,0 +1,269 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    background-color: white;
+    color: #333;
+}
+.top-bar{
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    /* border-style: solid; */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: white;
+}
+.top-bar .logo{
+    /* border-style: solid; */
+    padding: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+.logo:hover{
+   opacity: 0.5;
+}
+.logo-name{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: 800;
+}
+.bi{
+    font-size: 20px;
+    font-weight: 1000;
+}
+.top-bar-icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    right: 105px;
+    overflow: hidden; 
+}
+.top-bar-icons .icon{
+   width: 35px;
+   height:auto;
+   margin: 2px;
+   margin-left: 15px;
+   text-align: center;
+   border-radius: 5px;
+   cursor: pointer;
+   transition-duration: 0.3s;
+   transition-timing-function: ease-in-out;
+   font-size: 24px;
+   overflow: hidden; 
+}
+.top-bar .icon:hover{
+    background-color: rgb(229, 241, 252);
+    color: #444;
+    width: 40px;
+}
+.top-bar .icon:active{
+    background-color: rgb(229, 241, 252);
+    color: #444;
+    /* width: 45px; */
+    transform: scale(0.7534);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* dashboard */
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 55px;
+}
+
+.left-side-bar{
+    width: 15vw;
+    height: auto;
+    position: fixed;
+    /* border-style: solid; */
+    padding-top: 50px;
+}
+.other-pages{
+    padding: 10px;
+}
+.page-btn{
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+.page-btn:hover{
+    background-color: rgb(205, 215, 224);
+}
+.page-btn:active{
+    transform: scale(0.835);
+}
+.page-btn-active{
+    padding: 15px;
+    background-color: rgb(229, 241, 252);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.page-btn i{
+    font-size: 22px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.page-btn-active i{
+    font-size: 22px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.pay-tab{
+    width: auto;
+    height: 120px;
+    /* padding: 10px; */
+    border-radius: 5px;
+    background-image: url(../images/e.jpg);
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+}
+.pay-tab:hover{
+    opacity: 0.9;
+}
+.pay-tab .icon{
+    font-size: 25px;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 50%;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    margin-left: 40%;
+    margin-bottom: 7px;
+}
+.pay-tab i{
+    font-size: 25px;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 50%;
+    color: #333;
+}
+.pay-tab .text{
+   
+}
+.profile-card{
+    position: fixed;
+    width: 14vw;
+    height: auto;
+    background-color: #fff;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 5px;
+    bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+.profile-card img{
+    width:  50px;
+    height:  50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 5px;
+}
+.profile-details{
+    width: auto;
+    /* border-style: solid; */
+}
+.profile-details .username{
+    font-weight: 800;
+    padding-top: 10px;
+}
+.profile-details .account-type{
+    font-size: 12px;
+    opacity: 0.7;
+   
+}
+.profile-card:hover{
+    color: #3a3f58;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.profile-card:active{
+    color: #3e54d3;
+    transform: scale(0.954);
+}
+
+.update-text{
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    width: 60vw;
+    height: auto;
+    /* border-style: solid; */
+    padding: 25px;
+    margin-left: 15vw;
+}
+.right-side-bar{
+    width: 25vw;
+    height: auto;
+    /* border-style: solid; */
+    padding: 25px;
+}
+
+
+
+
+
+
+
+
+
+
