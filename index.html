@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
     <section class="top-bar">
@@ -18,6 +20,9 @@
             <div class="logo-name">
                 Precision
             </div>
+        </div>
+        <div class="company-name">
+            LiteTelcoms - Admin account
         </div>
         <div class="top-bar-icons">
             <!-- <div class="icon">
@@ -32,6 +37,9 @@
             <div class="icon">
                 <i class="si-user-circle"></i>
             </div>
+           
+             
+        
         </div>
     </section>
 
@@ -89,7 +97,79 @@
     
 
         <div class="main">
+           <!-- <div class="dashboard-text">
+                Dashboard
+           </div> -->
 
+
+
+
+
+
+           <div class="quick-analytics">
+            <div class="graphs">
+                <div class="graph">
+                  <div class="tab-name">
+                    Forecasted Revenue
+                  </div>
+                  <div class="main-forecasted-value">
+                    $347.54
+                  </div>
+                    <!-- <div id="chart-actual-data"></div> -->
+                    <div class="tab-des">
+                      $347.54 expected before July 27th.
+                    </div>
+                </div>
+
+                <div class="graph">
+                  <div class="tab-name">
+                      Total Revenue
+                  </div>
+                  <div class="main-forecasted-value">
+                    $4589.65
+                  </div>
+                    <!-- <div id="chart-actual-data"></div> -->
+                    <div class="tab-des">
+                        You have generated $4589.65 from over 7 months
+                    </div>
+                    <!-- <div id="chart-actual"></div> -->
+                </div>
+
+                <div class="graph">
+                  <div class="tab-name">
+                      Target Revenue
+                  </div>
+                  <div class="main-forecasted-value">
+                    $500
+                  </div>
+                    <!-- <div id="chart-actual-data"></div> -->
+                    <div class="tab-des">
+                      $250 remaining to hit the targeted revenue.
+                    </div>
+                    <!-- <div id="chart-actuals"></div> -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+            <div class="forecast-graph">
+              
+
+                <div class="graph-top-bar">
+                    <div class="graph-btn"><i class="si-chevron-up"></i>
+                    </div>
+                    <div class="graph-name">Revenue forecast 2025</div>
+                   
+                </div>
+                
+                <div id="chart"></div>
+            </div>
+            
         </div>
 
 
@@ -97,5 +177,123 @@
 
         </div>
     </section>
+
+    <script>
+
+var options = {
+          series: [{
+          name: 'Sales',
+          data: [10, 23, 14, 65, 53, 23, 18, 80, 45, 32, 110, 84, 124, 77]
+        }],
+          chart: {
+          height: 250,
+          type: 'line',
+        },
+        forecastDataPoints: {
+          count: 3
+        },
+        stroke: {
+          width: 3,
+          curve: 'smooth'
+        },
+        xaxis: {
+          type: 'string',
+          categories: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+          tickAmount: 10,
+          
+        },
+        title: {
+          text: '',
+          align: 'left',
+          style: {
+            fontSize: "16px",
+            color: '#666'
+          }
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'dark',
+            gradientToColors: [ '#Fb3285'],
+            shadeIntensity: 1,
+            type: 'horizontal',
+            opacityFrom: 0.9,
+            opacityTo: 1,
+            stops: [0, 100, 100, 100]
+          },
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      
+      
+    
+    </script>
+
+
+
+    <script>
+             
+       
+             var options = {
+          series: [{
+          name: 'XYZ MOTORS',
+          data:  ["51","24","13","34","53","26","27","68"]
+        }],
+          chart: {
+          type: 'area',
+          stacked: false,
+          height: 350,
+          zoom: {
+            type: 'x',
+            enabled: true,
+            autoScaleYaxis: true
+          },
+          toolbar: {
+            autoSelected: 'zoom'
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        markers: {
+          size: 0,
+        },
+        title: {
+          text: 'Stock Price Movement',
+          align: 'left'
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shadeIntensity: 1,
+            inverseColors: false,
+            opacityFrom: 0.5,
+            opacityTo: 0,
+            stops: [0, 90, 100]
+          },
+        },
+        yaxis: {
+          labels: ["51","24","13","34","53","26","27","68"],
+          title: {
+            text: 'Price'
+          },
+        },
+        xaxis: {
+          type: 'numeric',
+        },
+        tooltip: {
+          shared: false,
+          y: ["1","2","3","4","5","6","7","8"]
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart-actual-data"), options);
+        chart.render();
+      
+      
+    
+    </script>
 </body>
 </html>
